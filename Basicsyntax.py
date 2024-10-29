@@ -75,5 +75,7 @@ class BankAccount:
     def display(self):
         print(self.accountno,self.accountname,self.ifsccode,self.balance)
 obj1=BankAccount(7013979055,'Seshu','hdfc0007',100000)
+obj2=BankAccount(9908943539,'siva','hdfc0003',200000)
 obj1.display()
+obj2.display()
         
