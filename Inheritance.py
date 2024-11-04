@@ -73,18 +73,48 @@
 # c2.method1()
 #-----------------------HYBRID INHERITANCE-------------------------------------------------
 # combination of more than one inheritance is called hybrid inheritance
-class Grandparent:
-    def method1(self):
-        print("grandparent")
-class Father(Grandparent):
-    def method2(self):
-        print("iam father")
-class Mother:
-    print("iam mother")
-class Child(Father,Mother):
-    print("iam child")
-child=Child()
-child.method1()
-child.method2()
-print(Child.__mro__)
+# class Grandparent:
+#     def method1(self):
+#         print("grandparent")
+# class Father(Grandparent):
+#     def method2(self):
+#         print("iam father")
+# class Mother:
+#     print("iam mother")
+# class Child(Father,Mother):
+#     print("iam child")
+# child=Child()
+# child.method1()
+# child.method2()
+# print(Child.__mro__)
+#---------------------------EXAMPLE USING INHERITANCE------------------------------------
+class Member:
+    def __init__(self,fname,lname,email,mid,address,phno,datejoined):
+        self.fname=fname
+        self.lname=lname
+        self.email=email
+        self.mid=mid
+        self.address=address
+        self.phno=phno
+        self.datejoined=datejoined
+    def get_fname(self):
+        print(self.fname+''+self.lname)
+    def changeAddress(self,new_address):
+        self.address=new_address
+        print('Address changed successfully')
+    def changenumber(self,new_number):
+        self.phno=new_number
+        print("number changed successfully")
+class Faculty(Member):
+    def __init__(self, fname, lname, email, mid, address, phno, datejoined,subjectteaching,salary):
+        self.subjectteaching=subjectteaching
+        self.salary=salary
+        Member.__init__(self, fname, lname, email, mid, address, phno, datejoined) 
+    def getsalary(self):
+        print("your salary is",self.salary)
+f1=Faculty('seshu','sai','seshu@gmail.com','737','jangareddygudem','9908943539','11/4/8909','physics','10000')
+f1.get_fname()
+f1.getsalary()
+
+        
         
