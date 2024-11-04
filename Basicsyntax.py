@@ -65,19 +65,27 @@
 #     def __init__(self):
 #         print("this method automatically get's called when class was created")
 # obj1=SampleClass()
-            #let's the another example with bankaccount example
-# class BankAccount:
-#     def __init__(self,accountno,accountname,ifsccode,balance):
-#         self.accountno=accountno
-#         self.accountname=accountname
-#         self.ifsccode=ifsccode
-#         self.balance=balance
-#     def display(self):
-#         print(self.accountno,self.accountname,self.ifsccode,self.balance)
-# obj1=BankAccount(7013979055,'Seshu','hdfc0007',100000)
-# obj2=BankAccount(9908943539,'siva','hdfc0003',200000)
-# obj1.display()
-# obj2.display()
+#             let's the another example with bankaccount example
+class BankAccount:
+    def __init__(self,accountno,accountname,ifsccode,balance):
+        self.accountno=accountno
+        self.accountname=accountname
+        self.ifsccode=ifsccode
+        self.balance=balance
+    # def display(self):
+    #     print(self.accountno,self.accountname,self.ifsccode,self.balance)
+    def withdraw(self,amount):
+        self.balance-=amount
+    def deposit(self,amount):
+        self.balance+=amount
+    def checkbalance(self):
+        print(self.balance)
+    
+
+obj1=BankAccount(7013979055,'Seshu','hdfc0007',100000)
+obj2=BankAccount(9908943539,'siva','hdfc0003',200000)
+obj1.checkbalance()
+obj1.withdraw(30000)
+obj1.checkbalance()
 #-----------------------------------------------------------------------------------
 
-        
