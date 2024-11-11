@@ -16,17 +16,17 @@
 # c=child()
 # c.method()
 #----------------------------------------
-class parent:
-    def __init__(self,a,b):
-        self.a=a
-        self.b=b
-class child(parent):
-    def __init__(self,a,b,c,d):
-        self.c=c
-        self.d=d
-        parent.__init__(self,a,b)
-    def add(self):
-        print(self.a+self.b+self.c+self.d)
+# class parent:
+#     def __init__(self,a,b):
+#         self.a=a
+#         self.b=b
+# class child(parent):
+#     def __init__(self,a,b,c,d):
+#         self.c=c
+#         self.d=d
+#         parent.__init__(self,a,b)
+#     def add(self):
+#         print(self.a+self.b+self.c+self.d)
         
-c=child(1,2,3,4)
-c.add()
+# c=child(1,2,3,4)
+# c.add()
